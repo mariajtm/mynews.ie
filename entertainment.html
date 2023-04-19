@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Using Bootstrap CSS and JS plugin -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <title>Entertainment News</title>
+
+  <script type="text/javascript" src="./JS/entertainment.js"></script>
+  <!-- change color mode js -->
+  <script src="./JS/color-mode.js"></script>
+  <script src="./JS/getDate.js"></script>
+
+</head>
+
+<body onload="getDate()">
+    <!-- added svgs to use in color mode dropdown  -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+          <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+          <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+          <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+    </svg>
+  <header class="border-bottom">
+    
+      <div class="container">
+          <nav class="navbar navbar-expand-lg" aria-label="main navbar">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img src="./Images/mynews-light-logo.jpg" alt="MyNews Logo in light background" width="100px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./business.html">Business</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./real-estate.html">Real Estate</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./entertainment.html">Entertainment</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span id="todayIs"></span> <span id="currentDate"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (light)">
+                        <svg class="bi my-1 theme-icon-active"><use href="#sun-fill"></use></svg>
+                        <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                        <li>
+                          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
+                            <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+                            Light
+                            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                            <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+                            Dark
+                            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                            <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+                            Auto
+                            <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+       </div>
+  </header>
+<p class="entertainmentheader">Welcome to Your Daily Entertainment News</p>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-8">
+        <video src="Video/Jeremy Renner.mp4" id="myVideo" class="video" autoplay muted onclick=switchMute();>
+        </video>
+        <!-- News article and picture courtesy to
+          https://www.independent.ie/style/celebrity/celebrity-news/jeremy-renner-appears-on-first-us-late-night-tv-show-since-snowplough-accident-42426811.html
+          -->
+        <!-- Video clip courtesy to https://www.youtube.com/watch?v=vIkru3p4qUE-->
+        <!-- Mute function adapted from https://stackoverflow.com/questions/39041960/how-to-unmute-html5-video-with-a-muted-prop-->
+        <p>
+          Click on video to toggle mute and unmute.
+          <button onclick="pause()" class="video_button" type="button"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="purple" class="bi bi-pause-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z"/>
+          </svg> </button>
+          <button onclick="play()" class="video_button" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="purple" class="bi bi-play-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+          </svg></button>
+          <button onclick="replay()" class="video_button" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="purple" class="bi bi-repeat" viewBox="0 0 16 16">
+            <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"/>
+          </svg></button>
+          <br>
+          <br>
+          Jeremy Renner has made his first late night US television appearance since his serious snowplough incident on
+          New Year’s Day. The Marvel star, 52, made his entrance on Jimmy Kimmel Live! on Monday night with the
+          assistance of a cane,
+          and was given a standing ovation by audience members. It comes shortly after the airing of his first TV
+          interview since the incident, during which he sat down with
+          US journalist Diane Sawyer to share the details of what had happened. <a
+            href="https://www.independent.ie/style/celebrity/celebrity-news/jeremy-renner-appears-on-first-us-late-night-tv-show-since-snowplough-accident-42426811.html">Click
+            here for full article</a>
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <figure>
+          <img src="Images/Hillary.jpeg" class="img-fluid" alt="Picture of Hillary Swank">
+          <figcaption>Hilary Swank arrives at the 80th annual Golden Globe Award</figcaption>
+        </figure>
+        <!--News article and picture courtesy to https://cnalifestyle.channelnewsasia.com/entertainment/hilary-swank-gives-birth-twins-354291-->
+        <p>
+          Actress Hilary Swank has given birth to twins, a boy and a girl. The 48-year-old Million Dollar Baby star
+          posted a photo of her and her twins looking at the sunset on Instagram on Sunday (Apr 9) evening with the
+          caption: “It wasn't easy. But boy (and girl!) was it worth it.”She added on Instagram that she's "posting from
+          pure heaven”. She and entrepreneur Philip Schneider have been married since 2018. Over the course of her
+          pregnancy, Swank had been filming her new show Alaska Daily. She shared in an interview in October that when
+          her pants didn't fit during filming, she cut them open and put a jacket on to hide her bump. <a
+            href="https://cnalifestyle.channelnewsasia.com/entertainment/hilary-swank-gives-birth-twins-354291">Click
+            here for full article</a>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <figure>
+          <img src="Images/Shakira.jpeg" class="img-fluid" alt="Picture of Shakira">
+          <figcaption>Shakira 'begs' the media for privacy</figcaption>
+        </figure>
+        <!--News article and picture courtesy to https://www.rte.ie/entertainment/2023/0411/1376383-shakira-begs-media-to-respect-her-childrens-privacy/-->
+        <p>
+          Shakira has "begged" members of the media to respect her children's privacy, speaking "not as an artist, but
+          as a mother". The Columbian pop singer, 46, acknowledged there is a high level of interest in her own life but
+          requested that her two sons, Milan, and Sasha, be allowed to live a "healthy and happy life". Shakira has been
+          the subject of much tabloid attention recently after reports she ended her relationship with footballer Gerard
+          Pique, with whom she shares her children. She is also set to face charges of tax fraud after a Spanish judge
+          approved a trial last year. Shakira has
+          denied all wrongdoing. In a lengthy Instagram post, written in Spanish on Monday, the singer addressed
+          journalists and members of the
+          media. <a
+            href="https://www.rte.ie/entertainment/2023/0411/1376383-shakira-begs-media-to-respect-her-childrens-privacy/">Click
+            here for full article</a>
+        </p>
+      </div>
+      <div class="col-sm">
+        <figure>
+          <img src="Images/Colin.jpeg" class="img-fluid" alt="Picture of Colin Farrel">
+          <figcaption>Colin Farrel poses for Oscar Award Ceremony</figcaption>
+        </figure>
+        <!--News article and picture courtesy to https://www.thejournal.ie/oscars-night-reporting-from-la-hollywood-6017789-Mar2023/-->
+        <p>
+          “THE OSCARS ARE predictable, we already know who’s going to win.” Across the past few days in LA, film
+          insiders were pretty convinced that we already knew how this year’s
+          Oscars would turn out. Everything Everywhere All At Once, directed by the Daniels (as the film’s two creators
+          are collectively known), would clean up. Ireland wasn’t about to win a sweep of awards despite being nominated
+          for 14. And yet. We held on to a bit of hope. Granted, those who know their Oscars stats weren’t making their
+          predictions based on nothing. But hadn’t we seen Oscar shocks before? (And we don’t just mean Will Smith’s
+          behaviour last year). We dared to dream: Could Ireland actually see a few surprise wins? <a
+            href="https://www.thejournal.ie/oscars-night-reporting-from-la-hollywood-6017789-Mar2023/">Click
+            here for full article</a>
+        </p>
+      </div>
+      <div class="col-sm">
+        <figure>
+          <img src="Images/Millie.jpeg" class="img-fluid" alt="Picture of Millie Bobby Brown">
+          <figcaption>Millie Bobby Brown and Jake Boniovi</figcaption>
+        </figure>
+        <!--News article and picture courtesy to https://news.sky.com/story/millie-bobby-brown-appears-to-show-off-engagement-ring-in-photos-with-jake-bongiovi-12855023-->
+        <p>
+          Millie Bobby Brown and her partner Jake Bongiovi have sparked engagement rumours with their latest Instagram
+          posts. Excited fans are congratulating the couple after the 19-year-old Stranger Things actress and rock star
+          Jon Bon Jovi's son shared pictures featuring a large diamond. The Instagram post, which has millions of likes,
+          with a black and white photo of the couple, was captioned with lyrics from Taylor Swift's song "Lover". The
+          post read: "I've loved you three summers now, honey, I want 'em all." In the photo, the actress is seen
+          smiling with her boyfriend, wearing a ring on her left hand.
+          <a
+            href="https://news.sky.com/story/millie-bobby-brown-appears-to-show-off-engagement-ring-in-photos-with-jake-bongiovi-12855023">Click
+            here for full article</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

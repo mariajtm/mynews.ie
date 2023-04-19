@@ -1,0 +1,63 @@
+/* maria css */
+/* controls icons on color mode dropdown  */
+.bi {
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+    fill: currentcolor
+}   
+.bd-navbar .navbar-toggler .bi {
+    width: 1.5rem;
+    height: 1.5rem
+}
+.bd-navbar .dropdown-menu .dropdown-item:active .bi {
+    color: inherit !important
+}
+.bd-navbar .dropdown-menu .active .bi {
+    display: block !important
+}
+h1, h2, h3, h4{
+    font-family: 'Times New Roman', Times, serif;
+
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}  
+a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+li>a{
+    color: #540D6E ;
+}
+.bg-real-estate{
+    background-color: #272744;
+}
+.bg-business{
+    background-color: #EE4266;
+}
+.real-estate-img-1{
+    max-width: 100%;
+}
+.article-link{
+    font-style: italic;
+    color: rgb(52, 52, 52);
+}
+/* end of maria's css  */
+/* issac css */
+.video{
+    width: 100%;
+    height: auto;
+}
+
+.contactus{
+    background-color: lightgreen;
+}
+
+.entertainmentheader{
+    background-color: #540D6E;
+    color: azure;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 1%;
+}
+/* end of issac css */

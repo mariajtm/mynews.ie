@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- fontawesome used for icons  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <!-- bootstrap CSS -->
+
+    <!--Using Bootstrap CSS and JS plugin -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Contact Us</title>
+
+    <script type="text/javascript" src="JS/contact.js"></script> 
+  
+
+    <!-- change color mode js -->
+    <script src="./JS/color-mode.js"></script>
+    <script src="./JS/getDate.js"></script>
+
+</head>
+
+<body onload="getDate()">
+    <!-- added svgs to use in color mode dropdown  -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+        </symbol>
+    </svg>
+    <header class="border-bottom">
+        
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" aria-label="main navbar">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="./index.html"><img src="./Images/mynews-light-logo.jpg" alt="MyNews Logo in light background" width="100px;"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            
+                  <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./">Technology</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./business.html">Business</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./real-estate.html">Real Estate</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./entertainment.html">Entertainment</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./contact-us.html">Contact Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><span id="todayIs"></span> <span id="currentDate"></span></a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (light)">
+                          <svg class="bi my-1 theme-icon-active"><use href="#sun-fill"></use></svg>
+                          <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                          <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
+                              <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+                              Light
+                              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                              <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+                              Dark
+                              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                              <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+                              Auto
+                              <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                            </button>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+         </div>
+    </header>
+    <div class="container">
+        <nav class="contactus">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-email-tab" data-bs-toggle="tab" data-bs-target="#nav-email"
+                    type="button" role="tab" aria-controls="nav-email" aria-selected="true">Email Us</button>
+                <button class="nav-link" id="nav-call-tab" data-bs-toggle="tab" data-bs-target="#nav-call" type="button"
+                    role="tab" aria-controls="nav-call" aria-selected="false">Call Us</button>
+                <button class="nav-link" id="nav-address-tab" data-bs-toggle="tab" data-bs-target="#nav-address"
+                    type="button" role="tab" aria-controls="nav-address" aria-selected="false">Find Us</button>
+                <button class="nav-link" id="nav-story-tab" data-bs-toggle="tab" data-bs-target="#nav-story" type="button"
+                    role="tab" aria-controls="nav-story" aria-selected="false">Submit Your Story</button>
+            </div>
+        </nav>
+    
+        <div class="align-center">
+
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-email" role="tabpanel" aria-labelledby="nav-email-tab"
+                    tabindex="0">
+                    <h3>EMAIL US</h3>
+                    <p>You can email us at info@mynews.ie or fill in the form below</p>
+                    <form action="mailto:info@mynews.com" method="get" enctype="text/plain">
+                        Subject:<br>
+                        <select>
+                            <option>Compliment </option>
+                            <option>Complaint </option>
+                            <option>Queries </option>
+                            <option>Others </option>
+                        </select>
+                        <br>
+                        Your Email Address:<br>
+                        <input type="email" name="email" placeholder="Your Email Address"><br>
+                        Message:<br>
+                        <textarea name="body" rows="5" cols="30" placeholder="Your Message"></textarea><br>
+                        <input type="submit" value="Send">
+                    </form>
+                    <!--Form code adapted from https://www.w3docs.com/snippets/html/how-to-create-mailto-forms.html -->
+                </div>
+                <div class="tab-pane fade" id="nav-call" role="tabpanel" aria-labelledby="nav-call-tab" tabindex="0">
+                    <h3>CALL US</h3>
+                    <p>Landline: +353 8888 9999</p>
+                    <p>Fax No.: +353 8887 9999</p>
+                </div>
+                <div class="tab-pane fade" id="nav-address" role="tabpanel" aria-labelledby="nav-address-tab"
+                    tabindex="0">
+                    <h3>ADDRESS</h3>
+                    <p>Address: 53, Harolds Cross, Dublin </p>
+                    <p><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d79721.64132074807!2d-6.327264849391825!3d53.3020569765342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sie!4v1681140889014!5m2!1sen!2sie"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="nav-story" role="tabpanel" aria-labelledby="nav-story-tab" tabindex="0">
+                    <p>
+                    <form onsubmit="confirmprompt();">
+                        <table>
+                            <tr>
+                                <td style="width:100px">Name:</td>
+                                <!--Unable to style using CSS for table, hence in-line styling-->
+                                <td><input type="text" id="name" name="name" value="" placeholder="Enter Your Name"
+                                        size="35" minlength="3" required> </td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td><input type="email" id="email" name="email" value="" placeholder="Enter Your Email"
+                                        size="35" minlength="3" required></td>
+                            </tr>
+                            <tr>
+                                <td>Mobile:</td>
+                                <td><input type="text" id="mobile" name="mobile" value=""
+                                        placeholder="Enter Your Mobile" size="35" minlength="8" maxlength="15" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Category:</td>
+                                <td>
+                                    <input type="radio" id="category" name="category" value="Technology" checked>
+                                    <label for "technology"> Technology </label> <br>
+                                    <input type="radio" id="category" name="category" value="Business">
+                                    <label for "business"> Business </label> <br>
+                                    <input type="radio" id="category" name="category" value="Real Estate">
+                                    <label for "realestate"> Real Estate </label> <br>
+                                    <input type="radio" id="category" name="category" value="Entertainment">
+                                    <label for "entertainment"> Entertainment </label> <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Story:</td>
+                                <td><textarea id="story" name="story" rows="5" cols="35" placeholder="Your Story"
+                                        required></textarea><br></td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="mb-3">
+                                        <label for="formFileMultiple" class="form-label">Upload Your File if
+                                            Available</label>
+                                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                            
+                            <label for="dataprivacy"> 
+                                <input type="checkbox" id="dataprivacy" name="dataprivacy" value="accept">
+                                By clicking the submit button, you acknowledge and agree
+                                that the information you provide will be processed in accordance with our data
+                                privacy policy. This may include the collection, use, storage, and sharing of
+                                your personal information to provide you with the service you requested. You
+                                also acknowledge that you have read and understood our privacy policy and
+                                consent to its terms. If you do not agree to these terms, please do not click
+                                the submit button.
+                            </label>
+                        <input type="submit" name="" value="Submit Your Story">
+                    </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-4 p-4 bg-light">
+      <div class="container ">
+          <div class="row">
+              <div class="col-sm-2">
+                  <img src="./Images/mynews-light-logo.jpg" alt="" srcset="" width="100px">
+              </div>
+              <div class="col-sm-2">
+                  <h4 class="fst-italic">Policies</h4>
+                  <ol class="list-unstyled">
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Cookies Policy</a></li>
+                  </ol>
+              </div>        
+              <div class="col-sm-2">
+                  <h4 class="fst-italic">Featured</h4>
+                  <ol class="list-unstyled">
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Entertainment</a></li>
+                  <li><a href="#">Sports</a></li>
+                  </ol>
+              </div>        
+              <div class="col-sm-2">
+                  <h4 class="fst-italic">News</h4>
+                  <ol class="list-unstyled">
+                  <li><a href="#">Technology</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Real Estate</a></li>
+                  <li><a href="#">Entertainment</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  </ol>
+              </div>        
+              <div class="col-sm-2">
+                  <h4 class="fst-italic">More</h4>
+                  <ol class="list-unstyled">
+                  <li><a href="#">GitHub</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  </ol>
+              </div>        
+          </div>
+      </div>
+  </footer>
+
+
+</body>
+
+</html>
