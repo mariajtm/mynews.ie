@@ -61,3 +61,259 @@ li>a{
     padding: 1%;
 }
 /* end of issac css */
+
+/* start of Anastasiia's css */
+/** this section of CSS code is used to style technology page**/
+
+/*styling the headers*/
+.technologyheader{
+    background-color: 	#5DA6EF;
+    color: azure;
+    text-align: center;
+}
+
+/* styling the logo*/
+.logo{
+    border-radius: 10px;
+}
+
+/* styling video controls */
+.video_button {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: none;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.video_controls{
+    width: 500px; 
+    height: 50px;
+    text-align: left; 
+    clear: left; 
+    float: left;
+}
+
+/* formating the table */
+
+.leftColumn {
+    width: 60%;
+    vertical-align: top;
+  }
+
+.rightColumn {
+    width: 40%;
+    vertical-align: top;
+  }
+  
+/* adding spaces between the cells */
+.leftColumn, .rightColumn {
+    padding: 15px;
+  }
+
+/* styling the articles */
+/* for shadow used template from: https://getcssscan.com/css-box-shadow-examples */
+.article{
+    border-radius: 10px; 
+    border: 1px solid whitesmoke; 
+    padding: 20px; 
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.article_header{
+    text-align: left; 
+    font-family: 'Times New Roman', Times, serif; 
+    border-bottom: 3px solid whitesmoke;
+}
+
+.top_article_media{
+    width:500px;
+    height:300px;
+    float: left; 
+    margin-right: 10px;
+}
+
+.article_media{
+    width:265px;
+    height: 175px;
+    float: left;
+    margin-right: 10px;
+}
+
+.article_text{
+    text-align:justify;
+}
+
+/* styling footers */
+
+.line_tech{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 1px;
+    margin-bottom: 10px;
+}
+
+/* adding media queries to determine img align for different sizes of screens*/
+@media only screen and (max-width:950px) {
+    .leftColumn,
+    .rightColumn {
+        display: block;
+        width: 100%;
+    }
+
+    .top_article_media{
+        width:300px;
+        height: 190px;
+        float: left; 
+        margin-right: 10px;
+    }
+    .video_controls{
+        width: 300px; 
+        height: 50px;
+        text-align: left; 
+        clear: left; 
+        float: left;
+        margin-bottom: 3px;
+    }
+    
+    .article_media{
+        width:300px;
+        height: 190px;
+        float: left;
+        margin-right: 10px;
+    }
+
+}
+
+/** This section of CSS code is used to style technology page**/
+
+/** this section of CSS code is used to style homepage **/
+
+.indexheader{
+    background-color: 	#191c1d;
+    color: azure;
+    text-align: center;
+}
+
+/* formating&styling the table */
+.indexTable{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background-color: whitesmoke;
+    border-radius: 10px ;
+    margin-top: 10px;
+}
+
+.firstColumn, .thirdColumn {
+    width: 30%;
+    vertical-align: top;
+}
+.secondColumn {
+    width: 40%;
+    vertical-align: top;
+}
+
+/* formating&styling the gallery */
+#gallery_images{
+    width:650px;
+    height:400px;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.gallery_content{
+    background-color:#191c1d;
+     margin-top: 15px; 
+     border-radius: 10px; 
+     color: azure;
+}
+
+#gallery_headers{
+    text-align: center; 
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.main_text{
+    text-align: justify; 
+    margin-left: 20px;  
+    margin-right: 20px;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+/* formating&styling the side articles */
+.side_article{
+    width:265px;
+    height: 175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.article_content {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+.short_line {
+    width: 90%;
+    background-color: lightgrey;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+  
+.side_header {
+    text-align: center;
+    margin-top: 5px;
+    display: block; 
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif; 
+    font-style: italic;
+}  
+
+/* styling links */
+.home_link:link {
+    color: black;
+    text-decoration: none;
+  }
+
+.home_link:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.home_link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.home_link:active {
+    color: black;
+    text-decoration: none;
+}
+
+/* styling footer */
+.line_home{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 1px;
+    margin-bottom: 10px;
+}
+
+/* adding media queries to determine table align for different sizes of screens*/
+@media only screen and (max-width:768px) {
+    .firstColumn, .thirdColumn {
+        display: block;
+        width: 100%;
+    }
+    .secondColumn {
+        display: none;
+    }
+}
+/** this section of CSS code is used to style homepage **/
+/* end of Anastasiia's css */
